@@ -1,0 +1,151 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMuuYIE0f86cHZCJwdlo1ei",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Twily-Spark/master1/blob/master/Untitled2.svg\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 261
+        },
+        "id": "-2C77ZaZ4AOE",
+        "outputId": "1d95921c-90c5-4858-b50f-eb1f70ed50b7"
+      },
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "Matrix([\n",
+              "[1, 2, 3],\n",
+              "[4, 5, 6],\n",
+              "[7, 8, 9]])"
+            ],
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}1 & 2 & 3\\\\4 & 5 & 6\\\\7 & 8 & 9\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "Matrix([\n",
+              "[11, 12, 13],\n",
+              "[21, 22, 23],\n",
+              "[31, 32, 33]])"
+            ],
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}11 & 12 & 13\\\\21 & 22 & 23\\\\31 & 32 & 33\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "Matrix([\n",
+              "[146, 152, 158],\n",
+              "[335, 350, 365],\n",
+              "[524, 548, 572]])"
+            ],
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}146 & 152 & 158\\\\335 & 350 & 365\\\\524 & 548 & 572\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "Matrix([\n",
+              "[12, 14, 16],\n",
+              "[25, 27, 29],\n",
+              "[38, 40, 42]])"
+            ],
+            "text/latex": "$\\displaystyle \\left[\\begin{matrix}12 & 14 & 16\\\\25 & 27 & 29\\\\38 & 40 & 42\\end{matrix}\\right]$"
+          },
+          "metadata": {}
+        }
+      ],
+      "source": [
+        "import sympy as sym\n",
+        "A =sym.Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\n",
+        "B =sym.Matrix([[11, 12, 13], [21, 22, 23], [31, 32, 33]])\n",
+        "C = A*B\n",
+        "D = A+B\n",
+        "\n",
+        "display(A)\n",
+        "display(B)\n",
+        "display(C)\n",
+        "display(D)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "initPt=[[1,2,1,0],[0,1,2,1]]\n",
+        "initP_np=np.array(initPt)\n",
+        "print(initP_np)\n",
+        "\n",
+        "print('~~~~~~')\n",
+        "print(rotA(ang1).dot(initP_np))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 228
+        },
+        "id": "hdQB71xiOBFN",
+        "outputId": "074d0fce-b34a-4619-ae5d-4bf2ef490b7d"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[1 2 1 0]\n",
+            " [0 1 2 1]]\n",
+            "~~~~~~\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'rotA' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-a85fc022337f>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'~~~~~~'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mrotA\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mang1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minitP_np\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'rotA' is not defined"
+          ]
+        }
+      ]
+    }
+  ]
+}
